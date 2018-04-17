@@ -40,10 +40,20 @@ build %>% group_by(Creation_Year,Current.Status) %>% summarise(tot=sum(Creation_
   ylab("Output")+xlab("Year")+
   geom_point(size=3,shape=21)
 
-build %>% group_by(Creation_Year,Current.Status) %>% summarise(tot=sum(Creation_Year)) %>% filter(Creation_Year<2018) %>%
-  ggplot(aes(x=factor(Creation_Year),y=tot,group=Current.Status,fill=Current.Status))+
-  ylab("Output")+xlab("Year")+
-  geom_point(size=3,shape=21)
+# Permit Status by creation date
+build %>% group_by(Current.Status,Creation_Year) %>% summarise(tot=length(Current.Status)) %>%
+  ggplot(aes(x=factor(Current.Status),y=tot,group=Current.Status,fill=Current.Status))+
+  ylab("Output")+xlab("Permit Status")+
+  geom_point(size=3,shape=21)+facet_wrap(~Creation_Year)
+
+# Timeframes to get permit filed to issued
+
+
+# Timeframes to get permit issued to construction start
+
+
+# Timeframes to get permit construction start to completed
+
 
 # Looking at building permits by zipcode
 build %>% group_by(Creation_Year,Zipcode) %>% summarise(tot=sum(Creation_Year)) %>% filter(Creation_Year<2018) %>%
