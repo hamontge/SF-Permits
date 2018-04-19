@@ -135,8 +135,9 @@ build %>% group_by(Creation_Year,Neighborhoods...Analysis.Boundaries) %>% summar
   ggtitle("Number of Permits by Neighborhood")
 ## "Financial District/South Beach" and "Mission" is extremely busy with permits
 
-## Exisitng stories
-build$Number.of.Existing.Stories
+## Exisitng number of stories for permits
+ggplot(build, aes(build$Number.of.Existing.Stories)) + geom_bar() +  xlab("Number of Stories") + 
+  ggtitle("Permiting overall Timeframe")
 
 
 ################################## Maps ###########################################################
