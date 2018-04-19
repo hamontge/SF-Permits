@@ -11,6 +11,7 @@ install.packages("stringr")
 library(stringr)
 install.packages("lubridate")
 library(lubridate)
+library(dplyr)
 
 build = read.csv("Building_Permits.csv")
 
