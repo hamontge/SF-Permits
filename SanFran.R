@@ -135,6 +135,9 @@ build %>% group_by(Creation_Year,Neighborhoods...Analysis.Boundaries) %>% summar
   ggtitle("Number of Permits by Neighborhood")
 ## "Financial District/South Beach" and "Mission" is extremely busy with permits
 
+## Exisitng stories
+build$Number.of.Existing.Stories
+
 
 ################################## Maps ###########################################################
 SFgoogle <- qmap("San Francisco", zoom = 13, color = "bw", legend = "topleft")
