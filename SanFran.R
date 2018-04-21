@@ -137,7 +137,7 @@ build %>% group_by(Creation_Year,Neighborhoods...Analysis.Boundaries) %>% summar
 
 ## Exisitng number of stories for permits
 ggplot(build, aes(build$Number.of.Existing.Stories)) + geom_bar() +  xlab("Number of Stories") + 
-  ggtitle("Permiting overall Timeframe")
+  ggtitle("Number of Stories of Buildings")
 
 
 ################################## Maps ###########################################################
